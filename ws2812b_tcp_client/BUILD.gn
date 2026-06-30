@@ -1,0 +1,17 @@
+static_library("ws2812b_tcp_client") {
+  sources = [
+    "ws2812b_tcp_client.c",
+    "wifi_connect.c",
+    "yuanyi_ws2812b.c"
+  ]
+
+  include_dirs = [
+    "//commonlibrary/utils_lite/include",
+    "//kernel/liteos_m/components/cmsis/2.0",
+    "//base/iothardware/peripheral/interfaces/inner_api",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/include",
+    "//device/board/hisilicon/hispark_pegasus/iot_hardware_hals/include",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/lwip_sack/include",
+    "//foundation/communication/wifi_lite/interfaces/wifiservice"
+  ]
+}
