@@ -1,0 +1,28 @@
+static_library("gy33t_tcp_server") {
+  sources = [
+    "gy33t_tcp_server.c",
+    "wifi_connect.c",
+    "yuanyi_gy33t.c",
+    "yuanyi_bh1750fvi.c",
+    "iot_main.c",
+    "iot_profile.c",
+    "iot_hmac.c",
+    "iot_log.c"
+  ]
+
+  include_dirs = [
+    "//commonlibrary/utils_lite/include",
+    "//kernel/liteos_m/components/cmsis/2.0",
+    "//base/iothardware/peripheral/interfaces/inner_api",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/include",
+    "//device/board/hisilicon/hispark_pegasus/iot_hardware_hals/include",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/lwip_sack/include",
+    "//foundation/communication/wifi_lite/interfaces/wifiservice",
+    "//third_party/cJSON",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/lwip_sack/include/lwip",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/mbedtls/include",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/mbedtls/include/mbedtls",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/paho.mqtt.c/include",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/paho.mqtt.c/include/mqtt"
+  ]
+}
